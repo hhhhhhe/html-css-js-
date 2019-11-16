@@ -1,1 +1,2 @@
-﻿this is a webpage just about some use skills of div
+﻿这是一个有关div使用技巧的网页
+怎么连接不成功呀
