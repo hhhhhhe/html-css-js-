@@ -1,0 +1,11 @@
+Math的常用函数
+1、Math.round(3.5)//四舍五入
+2、Math.random();//随机0~1之间随机数
+3、Math.max()//返回最大数
+4、Math.min()//返回最小数
+5、Math.abs(-10)//返回绝对值
+6、Math.ceil()//向上取整
+7、Math.floor()//向下取整
+8、Math.pow(x,y)//求x的y次方
+9、Math.sqrt(4)//开方
+10、Math.sin()/cos()/tan()//三角函数
