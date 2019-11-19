@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS事件驱动函数的学习</title>
+    <script type="text/javascript">
+    window.onload=function(){
+        var oBtn=document.getElementById("btn");
+        var oTxt=document.getElementById("txt");
+        oBtn.onclick=function(){
+            oTxt.value="这是修改后的内容";
+        alert("点击修改键就可以修改内容");
+        }
+
+    }
+    /*var arr=new Array(10,11,23);
+    alert(arr);*/
+    /*创建数组的方法：
+    1、使用new运算符创建数组
+    参数有多个时，参数就是数组的内容；
+    参数只有一个且参数刚好是数字时，数组长度是该参数值
+    2、省略new运算符创建数组
+    */
+    var arrr=Array(1,2,3,3);
+    alert(arrr);
+    </script>
+</head>
+<body>
+   <input type="text" value="默认文字" id="txt"/>
+   <input type="button" value="清空" id="btn"/d>
+</input> 
+</body>
+</html>
