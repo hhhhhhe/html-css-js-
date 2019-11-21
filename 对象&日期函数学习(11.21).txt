@@ -1,0 +1,93 @@
+p74开始 2019年11月21日
+
+input标签的定义与用法
+input标签是用于收集用户信息
+根据不同的type属性值，输入字段拥有很多种形式。输入字段可以是文本字段、复选框、掩码后的文本控件、单选按钮、按钮等等
+
+web对象创建的三种方法
+1、var oj = new object();
+2、var oj = object();
+3、var oj = {};
+
+对象里面的数据是对象的属性
+创建对象的属性的格式
+oj.age="18";
+对象里面的函数是对象的方法
+创建对象的方法的格式
+oj.study = function (){
+具体的方法实现；
+}
+
+通过delete删除对象的属性
+delete oj.age;
+
+函数也是一种数据类型，是一种复合型数据类型
+
+
+日期也是一种数据类型，是一种复合数据类型
+日期对象
+创建日期对象 
+var d = new Date();
+//默认是当前系统时间，在格林尼治的时间加8个小时就是中国时间
+生成日期对象的参数
+var d = Date("2015/08/22");
+var d = Date("2016-09-22");
+var d = Date(2017,04,13,14,34);
+
+1s=1000ms
+参数可以毫秒数，计算从1970年开始+毫秒数，计算出这个时间
+1970年1月1日0时0分为起点（第一个操作系统的诞生日）
+
+日期对象的格式化方法
+日期对象.方法();
+
+set与get
+set是设置值 
+get是获取值
+var d = new Date();
+alert(d.setDate(4));//日期中的日变为四号
+alert(d.getDate());//放回当前日期中的日
+获取一周的某一天或者一个月中的莫一天，是从0开始的，第0就是星期日/1月，且不可以更改日期
+
+d.set/getTime()
+是获取当前日期到1970年的毫秒数
+Date.parse("2016-08-22")
+参数：是一个日期格式的字符串
+功能：返回这个日期到1970年的毫秒数
+
+显示当前的日期
+function showdate(){
+var d = new Date();
+var year = d.getFulYear();
+var moth = d.getMont() + 1;//月是从零开始计算应该+1才可以}
+var date = d.getDate();
+var week = d.getDay()
+if(week == 0){
+week = "日";
+}
+var hour = d.gethours();
+var min = d.getMiinutes();
+var sec = d.getSeconds();
+return year + "年" + month + "月" + date + "日" + week + "星期" + hour + "时" + min + "分钟" + sec + "秒"；
+
+计算n天后的日期
+function numOfDate(){
+var d = new Date();
+var date = d.getDate();
+d.setDate(date + n);
+}
+ setInterval(函数，毫秒数)//每隔所传参数的毫秒数就调用一个参数中的函数
+ 返回值：当前页面上对于这个定时器的ID
+ 清除定时器 clearInterval(定时器Id号)
+ 
+ 
+ innerHTNL 获取标签间的所有内容
+ id号.innerHTNL();//不仅是标签中的内容，包括文字的html格式
+ innerHTML 设置标签间的所有内容
+ id号.innerHTML = "<h1>我是替换标签</h1>"
+ 
+ 
+ 可以将查找标签节点的操作进行简化：
+ function $(id){
+ return document.getElementById(id);
+ }
